@@ -1,0 +1,20 @@
+#include <iostream>
+#include <opencv2/opencv.hpp>
+
+int main()
+{
+   cv::VideoCapture cap("ddd.mp4");
+  
+   cv::Mat mat; 
+   while(1)
+   {
+
+        cap.read(mat);
+        cv::imshow("test", mat);
+        if (cv::waitKey(30) == 'q')
+           break; 
+
+   }
+
+   return 0;
+}
